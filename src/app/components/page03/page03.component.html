@@ -1,4 +1,5 @@
 <div id="page03">
+
   <div id="cont">
     <div class="ttl">There’s a brief of the users we make products for. Use their names in order to remember who will
       use the final result of our work.
@@ -16,7 +17,27 @@
         </div>
       </div>
       <div class="blockRight">
-        <div class="picR"></div>
+
+        <div class="popup-wrapper">
+          <input type="checkbox" class="popup-checkbox" id="popupCheckboxOne">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="popupCheckboxOne" class="popup-closer">&#215;</label>
+              <app-page04 *ngIf="currentPage == 0"></app-page04>
+              <app-page05 *ngIf="currentPage == 1"></app-page05>
+              <app-page06 *ngIf="currentPage == 2"></app-page06>
+              <app-page07 *ngIf="currentPage == 3"></app-page07>
+              <a href="#" class="previous round" (click)="changePage(-1)">‹</a>
+              <a href="#" class="next round" (click)="changePage(1)">›</a>
+            </div>
+          </div>
+        </div>
+
+        <label for="popupCheckboxOne" class="popup-shower">
+          <div class="picR"></div>
+        </label>
+
+
         <div class="topicR">Intentional user</div>
         <div class="textR">Un usuario que padece una enfermedad y que conoce las curas medicinales por recomendación de
           amigos o de internet. Requieren cura natural, porque no les funciona el tratamiento químico, porque no tienen
